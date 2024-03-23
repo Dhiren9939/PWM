@@ -1,7 +1,5 @@
 package Encryption;
 
-import LocalStorage.RawEntry;
-
 public class Encrypter {
 	private int key;
 	private String msg = "";
@@ -11,21 +9,6 @@ public class Encrypter {
 	public Encrypter(int key, String msg) {
 		this.key = key;
 		this.msg = msg;
-	}
-
-	public Encrypter(){}
-
-	public Encrypter(int key,RawEntry rEntry){
-		this.key = key;
-		this.msg = rEntry.toString();
-	}
-
-	public void setKey(int key){
-		this.key = key;
-	}
-
-	public void setMessage(String message){
-		this.msg = message;
 	}
 
 	private int checkSum(String s, int l) {
